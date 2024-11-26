@@ -1,0 +1,251 @@
+/* Global reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto;
+    overflow: auto;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: #1e1e1e; /* Default to dark mode */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    color: #ffffff; /* Light text for dark mode */
+}
+
+/* Light mode adjustments */
+body.light-mode {
+    background-color: #f5f5f5; /* Light background for light mode */
+    color: #333333; /* Dark text for readability */
+}
+
+.status {
+    display: none;
+    padding: 1px;
+    border-radius: 1px;
+    margin: 1px 0;
+}
+
+/* Chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    background-color: #2e2e2e; /* Dark mode */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Light mode for chat container */
+body.light-mode .chat-container {
+    background-color: #ffffff; /* Light background */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+    flex-direction: column; /* Change direction to column */
+    padding: 10px;
+    background-color: #2e2e2e;
+    border-bottom: 1px solid #444444;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Light mode for input area */
+body.light-mode .input-area {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Input field */
+.user-input {
+    flex: 1;
+    width: 100%; /* Ensure it spans the full width */
+    padding: 15px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Light mode for input field */
+body.light-mode .user-input {
+    background-color: #f1f1f1;
+    color: #333333;
+    border: 1px solid #ddd;
+}
+
+/* Send button */
+.send-btn {
+    width: 20%;
+    padding: 15px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for send button */
+.send-btn:hover {
+    background-color: #0056b3;
+}
+/* Theme toggle button */
+.theme-toggle-btn {
+    padding: 5px 5px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Light mode for theme toggle button */
+body.light-mode .theme-toggle-btn {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Chat columns */
+.chat-columns {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    gap: 20px;
+    overflow-y: hidden;
+    justify-content: space-between;
+    height: calc(100% - 60px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Chat column styling */
+.chat-column {
+    flex: 1;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    gap: 10px;
+    position: relative;
+}
+
+/* Light mode for chat column */
+body.light-mode .chat-column {
+    background-color: #f9f9f9;
+    color: #333333;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat column header */
+.chat-column h2 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #3a3a3a; /* Match with column background */
+    z-index: 1;
+}
+
+/* Light mode for chat column header */
+body.light-mode .chat-column h2 {
+    background-color: #ffffff;
+}
+
+/* Chat message styling */
+.message {
+    padding: 10px 15px;
+    border-radius: 10px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    background-color: #4a4a4a;
+    color: #dddddd;
+    margin-bottom: 10px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+/* Light mode for chat message */
+body.light-mode .message {
+    background-color: #f1f1f1;
+    color: #333333;
+}
+
+/* User message */
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Light mode user message */
+body.light-mode .user-message {
+    background-color: #007bff;
+}
+
+/* Bot message */
+.bot-message {
+    background-color: #4a4a4a;
+    color: #dddddd;
+    align-self: start;
+}
+
+/* Light mode bot message */
+body.light-mode .bot-message {
+    background-color: #f1f1f1;
+    color: #333333;
+}
+
+/* Scrollbar styling for dark mode */
+.chat-column::-webkit-scrollbar {
+    width: 8px;
+    background-color: #2e2e2e;
+}
+
+.chat-column::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 4px;
+}
+
+/* Scrollbar styling for light mode */
+body.light-mode .chat-column::-webkit-scrollbar {
+    background-color: #f5f5f5;
+}
+
+body.light-mode .chat-column::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+}

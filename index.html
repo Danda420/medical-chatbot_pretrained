@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chatbot</title>
+    <link rel="icon" type="image/png" href="assets/ic.png">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="chatbot.js" defer></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="input-area">
+            <form id="chat-form">
+                <input type="text" id="question" name="question" class="user-input" placeholder="Tulis pesan..." required> 
+                <button type="submit" class="send-btn">Kirim</button>
+                <button type="button" class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+            </form>
+            <div class="status" id="status" style="display: none;">Mengenerate jawaban, Tolong tunggu...</div>
+        </div>
+        <div class="chat-columns" id="chat-columns">
+            <!-- Chat history will be dynamically updated here -->
+        </div>
+    </div>
+</body>
+</html>
