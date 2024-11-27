@@ -15,8 +15,13 @@
                 <input type="text" id="question" name="question" class="user-input" placeholder="Tulis pesan..." required> 
                 <button type="submit" class="send-btn">Kirim</button>
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+                <div id="status" style="display: none;">
+                    <div class="status-content">
+                        <div class="loader"></div>
+                        <span class="status-text">Generating answers...</span>
+                    </div>
+                </div>
             </form>
-            <div class="status" id="status" style="display: none;">Mengenerate jawaban, Mohon tunggu...</div>
         </div>
         <div class="chat-columns" id="chat-columns">
             <!-- Chat history will be dynamically updated here -->
