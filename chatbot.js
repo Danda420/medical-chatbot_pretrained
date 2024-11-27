@@ -70,9 +70,16 @@ document.getElementById('chat-form').addEventListener('submit', function(event) 
 
     document.getElementById('question').value = '';
     
-    const statusMessage = document.getElementById('status');
-    statusMessage.style.display = 'block';
+    const generateStatus = document.getElementById('status');
+    const statusText = document.getElementById('status-text');
+    const serverDownMsg = document.getElementById('serverdown');
+    const loadingAnim = document.getElementById('loader');
 
+    generateStatus.style.display = 'block';
+    statusText.style.display = 'block';
+    loadingAnim.style.display = 'block';
+    serverDownMsg.style.display = 'none';
+    
     fetch(apiUrl, {
         method: 'POST',
         headers: {
@@ -82,7 +89,7 @@ document.getElementById('chat-form').addEventListener('submit', function(event) 
     })
     .then(response => response.json())
     .then(data => {
-        statusMessage.style.display = 'none';
+        generateStatus.style.display = 'none';
 
         const models = ['T5', 'BART', 'PHI3.5', 'GPT2'];
         models.forEach(model => {
@@ -93,7 +100,10 @@ document.getElementById('chat-form').addEventListener('submit', function(event) 
     })
     .catch(error => {
         console.error('Error:', error);
-        statusMessage.style.display = 'none';
+        generateStatus.style.display = 'block';
+        loadingAnim.style.display = 'none';
+        statusText.style.display = 'none';
+        serverDownMsg.style.display = 'block';
     });
 });
 

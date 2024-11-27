@@ -17,8 +17,9 @@
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
                 <div id="status" style="display: none;">
                     <div class="status-content">
-                        <div class="loader"></div>
-                        <span class="status-text">Generating answers...</span>
+                        <div id="loader" class="loader"></div>
+                        <span id="status-text" class="status-text">Generating answers...</span>
+                        <span id="serverdown" class="status-text">Server is down</span>
                     </div>
                 </div>
             </form>
