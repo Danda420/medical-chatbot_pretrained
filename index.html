@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Chatbot</title>
+    <title>Chatbot Medis</title>
     <link rel="icon" type="image/png" href="assets/ic.png">
     <link rel="stylesheet" href="assets/styles.css">
     <script src="chatbot.js" defer></script>
@@ -11,10 +11,13 @@
 <body>
     <div class="chat-container">
         <div class="input-area">
+            <center><h2>Chatbot Tanya Jawab Kesehatan</h2></center>
             <form id="chat-form">
-                <input type="text" id="question" name="question" class="user-input" placeholder="Tulis pesan..." required> 
-                <button type="submit" class="send-btn">Kirim</button>
-                <button type="button" class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+                <textarea id="question" name="question" class="user-input" placeholder="Tulis pesan..." required></textarea>
+                <center>
+                    <button type="submit" class="send-btn">Kirim</button>
+                    <button type="button" class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+                </center>
                 <div id="status" style="display: none;">
                     <div class="status-content">
                         <div id="loader" class="loader"></div>
