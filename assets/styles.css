@@ -182,7 +182,7 @@ body.light-mode .theme-toggle-btn {
     gap: 10px;
     overflow-y: hidden;
     justify-content: space-between;
-    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
     padding: 10px;
     box-sizing: border-box;
 }
