@@ -8,7 +8,7 @@ let chatHistory = {
 let apiUrl = "";
 
 function loadNgrokUrl() {
-    return fetch('NgrokTunnel')
+    return fetch('ngrokTunnel')
         .then(response => response.text())
         .then(data => {
             const ngrokPart = data.trim();
@@ -29,6 +29,8 @@ function scrollToBottom() {
 function toggleTheme() {
     const body = document.body;
     body.classList.toggle('light-mode');
+    const themeButton = document.querySelector('.theme-toggle-btn');
+    themeButton.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
 }
 
 function updateChatColumns() {

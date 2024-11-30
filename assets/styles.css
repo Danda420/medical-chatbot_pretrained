@@ -19,6 +19,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
     color: #ffffff; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode adjustments */
@@ -66,6 +67,7 @@ body.light-mode {
     border-radius: 10px;
     max-height: 100vh;
     overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode for chat container */
@@ -85,6 +87,7 @@ body.light-mode .chat-container {
     box-sizing: border-box;
     gap: 10px;
     flex-shrink: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode for input area */
@@ -104,6 +107,7 @@ body.light-mode .input-area {
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode for input field */
@@ -143,6 +147,7 @@ body.light-mode .user-input {
     font-size: 16px;
     margin-left: 10px;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 /* Light mode for theme toggle button */
@@ -203,6 +208,7 @@ body.light-mode .theme-toggle-btn {
     padding-bottom: 20px;
     gap: 10px;
     position: relative;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode for chat column */
@@ -224,6 +230,7 @@ body.light-mode .chat-column {
     top: 0;
     background-color: #3a3a3a;
     z-index: 1;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode for chat column header */
@@ -242,6 +249,7 @@ body.light-mode .chat-column h2 {
     margin-bottom: 10px;
     display: inline-block;
     max-width: 80%;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode for chat message */
@@ -255,6 +263,7 @@ body.light-mode .message {
     background-color: #007bff;
     color: white;
     align-self: flex-end;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode user message */
@@ -268,6 +277,7 @@ body.light-mode .user-message {
     background-color: #4a4a4a;
     color: #dddddd;
     align-self: start;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode bot message */
@@ -280,11 +290,13 @@ body.light-mode .bot-message {
 .chat-column::-webkit-scrollbar {
     width: 8px;
     background-color: #2e2e2e;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .chat-column::-webkit-scrollbar-thumb {
     background-color: #555555;
     border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Scrollbar styling for light mode */
